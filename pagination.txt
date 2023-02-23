@@ -1,0 +1,120 @@
+import { useTable, useGlobalFilter, usePagination } from 'react-table'
+const {
+    getTableProps,
+    getTableBodyProps,
+    headerGroups,
+    page,
+    nextPage,
+    previousPage,
+    canNextPage,
+    canPreviousPage,
+    pageOptions,
+    gotoPage,
+    pageCount,
+    prepareRow,
+    state,
+    setGlobalFilter,
+  } = useTable({
+    columns,
+    data
+  }, useGlobalFilter, usePagination)
+
+  const { pageIndex, globalFilter } = state
+  function secondPage(count, index) {
+    if (count < 6) {
+      return 2
+    }
+    else {
+      if (index > 2) {
+        if (count - index > 2) {
+          return index
+        }
+        else {
+          return count - 3
+        }
+      }
+      else {
+        return 2
+      }
+    }
+  }
+
+  function thirdPage(count, index) {
+    if (count < 6) {
+      return 3
+    }
+    else {
+      if (index > 2) {
+        if (count - index > 2) {
+          return index + 1
+        }
+        else {
+          return count - 2
+        }
+      }
+      else {
+        return 3
+      }
+    }
+  }
+
+  function fourthPage(count, index) {
+    if (count < 6) {
+      return 4
+    }
+    else {
+      if (index > 2) {
+        if (count - index > 2) {
+          return index + 2
+        }
+        else {
+          return count - 1
+        }
+      }
+      else {
+        return 4
+      }
+    }
+  }
+<Row className="justify-content-md-center">
+
+        <Col md="auto">
+          <Pagination>
+            <Pagination.Item onClick={() => previousPage()} disabled={!canPreviousPage}><b>{'<'}</b></Pagination.Item>
+
+
+
+            <Pagination.Item onClick={() => gotoPage(0)} disabled={!canPreviousPage}>1</Pagination.Item>
+
+            { // 2nd
+              (pageCount > 2) && (
+                <Pagination.Item onClick={() => gotoPage(secondPage(pageCount, pageIndex) - 1)} disabled={secondPage(pageCount, pageIndex) - 1 == pageIndex}>{secondPage(pageCount, pageIndex)}</Pagination.Item>
+              )
+            }
+            { // 3rd
+              (pageCount > 3) && (
+                <Pagination.Item onClick={() => gotoPage(thirdPage(pageCount, pageIndex) - 1)} disabled={thirdPage(pageCount, pageIndex) - 1 == pageIndex}>{thirdPage(pageCount, pageIndex)}</Pagination.Item>
+              )
+            }
+
+            { // 4th
+              (pageCount > 4) && (
+                <Pagination.Item onClick={() => gotoPage(fourthPage(pageCount, pageIndex) - 1)} disabled={fourthPage(pageCount, pageIndex) - 1 == pageIndex}>{fourthPage(pageCount, pageIndex)}</Pagination.Item>
+
+              )
+            }
+
+
+            { // GO TO LAST
+              (pageCount > 1) && (
+                <Pagination.Item onClick={() => gotoPage(pageCount - 1)} disabled={!canNextPage}>{pageOptions.length}</Pagination.Item>
+
+              )
+            }
+
+            <Pagination.Item onClick={() => nextPage()} disabled={!canNextPage}><b>{'>'}</b></Pagination.Item>
+
+          </Pagination>
+
+        </Col>
+      </Row>
