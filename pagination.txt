@@ -118,3 +118,18 @@ const {
 
         </Col>
       </Row>
+
+Hey Jordan!
+ 
+Hope your day is going well! My name is Ryan Millares and I am a full-stack developer at Avanade. I saw through MyScheduling that you are looking for an Front End Developer (4709584) for the Bionic Project at Accenture Acquisitions and I wanted to reach out to you to explain why I think I’m the best fit for the role as a follow up to my application on MyScheduling. 
+ 
+I have a strong understanding of combining modern JavaScript frameworks such as React and Angular, as well as over six years of experience with HTML and CSS, in building out the UI for numerous web applications, ranging from employee-management portals, insurance quote trackers, Azure Cost calculators, real time chatting apps, and more. In my most recent project at the Gates Foundation, I enhanced the UI of their employee-management portal application with data input screens, popup modals, and interactive, paginated data grids. I created backend API endpoints in ASP.NET to enable complex querying, editing, and deletion of data through SQL scripts on the site database to connect it to the frontend. I also have experience writing stored procedures, functions, and triggers in PostgreSQL to support critical features on the backend of web applications.
+ 
+I put a strong emphasis on approaching my work from as many angles as possible and am passionate about delivering the ideal user experience for all personas. I strive to achieve the ideal vision of a product held by the project lead, and I do this by tackling problems with software solutions that can take on the worst that a QA tester could throw at it without a dent. In several past projects, I have been in charge of implementing the UI for numerous critical features, and performed rigorous edge-case handling to check for various issues such as insufficient permissions, data persistence, detecting user authentication, ensuring users proceed through the intended flow. I strongly adhere to agile integration in all of my projects to ensure the efficient handling of all incoming user stories. 
+ 
+Due to my remote flexibility, I am comfortable working outside my typical hours to accommodate other time zones. I have attached my one-pager for your convenience, and have linked my Digital CV, so you may view my previous experiences in more detail. Feel free to reach out to me on Teams or Outlook any time if you have any questions, and I’ll respond ASAP during US working hours! Thanks for your consideration, and I look forward to hearing back from you.
+ 
+Online CV: View Worker - Ryan Millares - Workday (myworkday.com)
+ 
+Sincerely,
+Ryan Millares
